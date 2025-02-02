@@ -4,7 +4,7 @@ class Persona {
     codigo;
     frase;
 
-    constructor(nombre= 'Sin nombre', codigo = 'Sin código', frase = 'Sin frase'){
+    constructor(nombre = 'Sin nombre', codigo = 'Sin código', frase = 'Sin frase') {
         console.log('Hola!');
 
         this.codigo = codigo;
@@ -12,10 +12,21 @@ class Persona {
         this.frase = frase;
 
     }
-    
+
+    quienSoy() {
+        console.log(`Sou ${this.nombre} y mi identidad es ${this.codigo}`)
+    }
+
+    miFrase() {
+        console.log(`${this.codigo} dice: ${this.frase}`)
+    }
+
 }
 
 
-const spiderman = new Persona('Peter Parker', 'Spider', 'Tu amigo y vecino, el hombre araña');
+const spiderman = new Persona('Peter Parker', 'Spiderman', 'Tu amigo y vecino, el hombre araña');
 
-console.log(spiderman)
+console.log(spiderman);
+
+spiderman.quienSoy();
+spiderman.miFrase();
